@@ -1,0 +1,81 @@
+//apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-kapt'
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+//    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.resep'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.resep"
+        minSdk 30
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Material design
+    implementation 'com.google.android.material:material:1.8.0'
+
+    // circle image view
+    // ref : https://github.com/hdodenhof/CircleImageView/blob/master/README.md
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Scalable unit text size
+    // ref : https://github.com/intuit/sdp/blob/master/README.md
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    // room database
+    implementation 'androidx.room:room-runtime:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
+    implementation 'androidx.room:room-ktx:2.5.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    // crop image library
+    // ref : https://github.com/ArthurHub/Android-Image-Cropper/blob/master/README.md
+    // implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.vanniktech:android-image-cropper:4.5.0'
+
+
+    // easy permission
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    // coroutines core
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+}
