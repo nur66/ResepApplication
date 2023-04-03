@@ -19,7 +19,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:layout_marginStart="@dimen/_20sdp">
+        android:layout_marginStart="@dimen/_20sdp"
+        android:padding="@dimen/_5sdp" >
 
         <Button
             android:layout_width="wrap_content"
@@ -28,7 +29,7 @@
             android:textColor="@color/white"
             android:paddingStart="@dimen/_20sdp"
             android:paddingEnd="@dimen/_20sdp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:background="@drawable/btn_bg"
             android:text="Get Strated" />
 

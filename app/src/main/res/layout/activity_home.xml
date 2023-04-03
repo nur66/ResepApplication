@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/search_bg"
                     android:iconifiedByDefault="false"
-                    android:queryBackground="@color/black"
+                    android:queryBackground="@color/white"
                     android:queryHint="Cari Resep Disini"
                     android:theme="@style/ThemeOverLay.Search" />
 
