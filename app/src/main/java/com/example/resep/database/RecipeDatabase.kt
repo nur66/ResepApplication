@@ -13,18 +13,18 @@ abstract class RecipeDatabase : RoomDatabase(){
 
     companion object{
 
-        var recipeDatabase:RecipeDatabase? = null
+        var recipesDatabase:RecipeDatabase? = null
 
         @Synchronized
         fun getDatabase(context: Context): RecipeDatabase{
-            if(recipeDatabase != null){
-                recipeDatabase = Room.databaseBuilder(
+            if(recipesDatabase == null){
+                recipesDatabase = Room.databaseBuilder(
                     context,
                     RecipeDatabase::class.java,
                     "recipe.db"
                 ).build()
             }
-            return recipeDatabase!!
+            return recipesDatabase!!
         }
     }
 

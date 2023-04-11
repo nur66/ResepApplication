@@ -8,11 +8,12 @@ import com.google.gson.annotations.SerializedName
 @Entity(tableName = "Category")
 data class Category(
     @PrimaryKey(autoGenerate = true)
-    var id:Int,
+    var id: Int,
 
-    @ColumnInfo(name = "categoriesitems")
+    @ColumnInfo(name = "categoryItems")
     @Expose
     @SerializedName("categories")
     @TypeConverters(CategoryListConverter::class)
-    var categoriesitems: List<CategoryItems>? = null
+    var categorieitems: List<CategoryItems>? = null
+
 )
