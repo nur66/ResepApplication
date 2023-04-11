@@ -8,7 +8,7 @@ import com.example.resep.adapter.MainCategoryAdapter
 import com.example.resep.adapter.SubCategoryAdapter
 import com.example.resep.entities.Recipes
 
-class HomeActivity : AppCompatActivity(){
+class HomeActivity : BaseActivity(){
     var arrMainCategory = ArrayList<Recipes>()
     var arrSubCategory = ArrayList<Recipes>()
 
