@@ -2,9 +2,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.resep.entities.Recipies
+import com.example.resep.entities.Recipes
 
-@Database(entities = [Recipies::class], version = 1, exportSchema = false)
+@Database(entities = [Recipes::class], version = 1, exportSchema = false)
 abstract class RecipeDatabase : RoomDatabase(){
 
 
